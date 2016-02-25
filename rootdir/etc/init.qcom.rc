@@ -72,6 +72,9 @@ on init
 on fs
     mount_all fstab.qcom
 
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
     # Add rfg_3 mounting from stock. This way we will still boot if partition doesn't actually exist on the device.
     mkdir /firmware/wsd 0500 rfs rfs
     wait /dev/block/bootdevice/by-name/rfg_3
