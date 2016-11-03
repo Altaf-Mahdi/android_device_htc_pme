@@ -30,6 +30,17 @@ LOCAL_MULTILIB := 32
 
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    CameraFace.cpp
+
+LOCAL_MODULE := libcameraface
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
 # HTC liblog
 include $(CLEAR_VARS)
 
