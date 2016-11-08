@@ -45,6 +45,9 @@ ENABLE_CPUSETS := true
 
 ENABLE_SCHEDBOOST := true
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8996
 TARGET_NO_BOOTLOADER := true
