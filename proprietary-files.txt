@@ -865,17 +865,16 @@ vendor/firmware/libpn548_fw.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
-# Perf
-bin/energy-awareness
-bin/iop
-bin/msm_irqbalance
-vendor/bin/perfd
-vendor/lib/libqti-iop-client.so
-vendor/lib/libqti-iop.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib64/libqti-iop-client.so
-vendor/lib64/libqti-iop.so
-vendor/lib64/libqti-perfd-client.so
+# Perf - op3
+bin/energy-awareness|fb61637227c917542898330cea9147a702eaa5b6
+bin/iop|9406fac5487f5067fe6c787dfc8a93a63e8b64e4
+vendor/bin/perfd|dcb9dc3b552972110dab04339255ce2ebee9463e
+vendor/lib/libqti-iop-client.so|b83b7eda3f5cb9e6b403bf23d33aade6486eacbe
+vendor/lib/libqti-iop.so|8c63454a3c700ca994a3bdf6c3656867c4772c0c
+vendor/lib/libqti-perfd-client.so|006a867d373b58152f5ad5ebd86956957c85dfff
+vendor/lib64/libqti-iop-client.so|64652ef71d76d0e9c57eaf3bbd19cc1be7ab8c0f
+vendor/lib64/libqti-iop.so|b04cf86515b6863ac380a3ff41dc68087526ea3c
+vendor/lib64/libqti-perfd-client.so|06db377372283634b3182f8e3be879eca3a39189
 
 # Peripheral manager
 bin/pm-proxy
@@ -996,12 +995,12 @@ vendor/lib/sensor_calibrate.so
 vendor/lib64/libsensor1.so
 vendor/lib64/sensor_calibrate.so
 
-# Thermal
+# Thermal - op3
 etc/thermal-engine.conf
-vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
+vendor/bin/thermal-engine|46fc6d83b391fdf036f7e70c54131bbe284ddde0
+-vendor/lib/libthermalclient.so|580966926e8045632d196dcc21fb5ca49b5eba4e
+-vendor/lib64/libthermalclient.so|ae9d79b82c92be57d17d6bac3a0451cac17110a5
+vendor/lib64/libthermalioctl.so|6f8dba061e614856db01a9687004cc5188c51549
 
 # Time services
 -app/TimeService/TimeService.apk
