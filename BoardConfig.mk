@@ -115,6 +115,14 @@ BOARD_HARDWARE_CLASS += \
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+
 # Display
 HAVE_ADRENO_SOURCE:= false
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
