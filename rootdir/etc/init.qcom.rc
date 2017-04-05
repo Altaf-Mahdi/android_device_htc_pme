@@ -52,16 +52,6 @@ on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
-    # Create cgroup mount point for memory
-    mkdir /sys/fs/cgroup/memory/bg 0750 root system
-    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
-    write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
-    chown root system /sys/fs/cgroup/memory/bg/tasks
-    chmod 0660 /sys/fs/cgroup/memory/bg/tasks
-
-    # From init.target.rc
-    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-
     # HTC SSD Battery
     chown system system /sys/class/power_supply/battery/full_level_dis_batt_chg
     chmod 0220 /sys/class/power_supply/battery/full_level_dis_batt_chg
@@ -75,11 +65,6 @@ on init
     chmod 0220 /sys/class/power_supply/battery/navigation
     chown system system /sys/class/power_supply/battery/disable_limit_chg
     chmod 0220 /sys/class/power_supply/battery/disable_limit_chg
-
-    # Setup zram options
-    write /sys/block/zram0/comp_algorithm lz4
-    write /sys/block/zram0/max_comp_streams 4
-    write /proc/sys/vm/page-cluster 0
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
