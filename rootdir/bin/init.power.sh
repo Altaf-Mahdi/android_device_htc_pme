@@ -20,9 +20,7 @@ write /sys/module/msm_thermal/core_control/enabled 0
 write /sys/devices/system/cpu/cpu0/online 1
 write /sys/devices/system/cpu/cpu2/online 1
 
-write /sys/module/lowmemorykiller/parameters/adj "0,200,300,700,900,906"
-write /sys/module/lowmemorykiller/parameters/minfree "27648,41472,48384,72378,84375,121875"
-write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 159375
+write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
 # if EAS is present, switch to sched governor (no effect if not EAS)
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "sched"
