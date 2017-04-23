@@ -42,6 +42,10 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
 TARGET_USES_64_BIT_BINDER := true
 
+ENABLE_CPUSETS := true
+
+ENABLE_SCHEDBOOST := true
+
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
