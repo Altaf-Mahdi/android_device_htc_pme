@@ -24,3 +24,5 @@
 
 /devices/soc/74a4900.sdhci/mmc_host/mmc*    auto               auto    defaults                                                                                          voldmanaged=sdcard1:auto,noemulatedsd,encryptable=userdata
 /devices/platform/msm_hsusb*                auto               auto    defaults                                                                                          voldmanaged=usbdisk:auto
+
+/dev/block/zram0                            none               swap    defaults                                                                                          zramsize=536870912
