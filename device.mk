@@ -276,6 +276,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
+    wificond \
+    wifilogd \
     wlutil \
     wpa_supplicant \
     wpa_supplicant.conf
