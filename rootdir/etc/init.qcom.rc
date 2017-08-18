@@ -526,7 +526,7 @@ service ipacm-diag /system/bin/ipacm-diag
     class main
     user system
     socket ipacm_log_file dgram 660 system net_admin
-    group net_admin qcom_diag
+    group net_admin diag
     writepid /dev/cpuset/system-background/tasks
 
 service ipacm /system/bin/ipacm
@@ -543,7 +543,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service loc_launcher /system/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet qcom_diag wifi
+    group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
@@ -639,7 +639,7 @@ service qcom-sh /system/bin/sh /init.qcom.sh
 service qmuxd /system/bin/qmuxd
     class core
     user root
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps diag
     writepid /dev/cpuset/system-background/tasks
 
 service qseecomd /system/bin/qseecomd
