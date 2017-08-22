@@ -63,6 +63,7 @@ vidc.debug.perf.mode=2
 
 # Media
 mm.enable.smoothstreaming=true
+persist.media.treble_omx=false
 
 # Perf
 ro.am.reschedule_service=true
