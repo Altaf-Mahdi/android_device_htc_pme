@@ -832,6 +832,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
 # Media
+-vendor/lib/libgpustats.so
 lib/libOmxVpp.so
 lib/libvpplibrary.so
 vendor/lib/libI420colorconvert.so
@@ -842,6 +843,7 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+-vendor/lib64/libgpustats.so
 
 # Mixed
 lib/libprojector.so
