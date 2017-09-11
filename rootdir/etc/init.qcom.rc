@@ -485,7 +485,6 @@ service audiod /system/bin/audiod
 
 service charger /charger
     class charger
-    seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
 
 service cnd /system/vendor/bin/cnd
