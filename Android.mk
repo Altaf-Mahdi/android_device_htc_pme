@@ -135,6 +135,18 @@ $(WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WIDEVINE_SYMLINKS)
 
+MC_IMAGES := \
+    mc_v2.b00 mc_v2.b01 mc_v2.b02 mc_v2.b03 mc_v2.b04 mc_v2.b05 mc_v2.b06 mc_v2.mdt
+
+MC_SYMLINKS := $(addprefix $(TARGET_ROOT_OUT)/firmware/image/,$(notdir $(MC_IMAGES)))
+$(MC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Mobicore firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/etc/firmware/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(MC_SYMLINKS)
+
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"
