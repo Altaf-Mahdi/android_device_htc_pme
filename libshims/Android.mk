@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,6 +13,47 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
+
+# Camera
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+  camera_shim.cpp
+
+LOCAL_SHARED_LIBRARIES := \
+  libui
+
+LOCAL_MODULE := libshim_camera
+LOCAL_MODULE_TAGS := optional
+LOCAL_MULTILIB := 32
+
+include $(BUILD_SHARED_LIBRARY)
+
+# HTC liblog
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    htc_log.c
+
+LOCAL_MODULE := liblog_htc
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
+# Perf
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    perf.c
+
+LOCAL_MODULE := libshim_power
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
+# Ril
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -21,5 +62,6 @@ LOCAL_SRC_FILES := \
 LOCAL_MODULE := libshim_ril
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
