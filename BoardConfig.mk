@@ -164,6 +164,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Linker
 LINKER_FORCED_SHIM_LIBS := /system/vendor/bin/slim_daemon|liblog_htc.so
 
+# Mainfest
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 

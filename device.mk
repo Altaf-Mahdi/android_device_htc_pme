@@ -87,18 +87,18 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
-    audio.a2dp.default \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audio.primary.msm8996 \
+    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     audio_amplifier.msm8996 \
     libaudio-resampler \
-    libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    tinymix
+    libqcomvoiceprocessingdescriptors \
+    libqcompostprocbundle
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
@@ -131,15 +131,25 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
-# Display
+# Display/Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
     copybit.msm8996 \
     gralloc.msm8996 \
     hwcomposer.msm8996 \
     memtrack.msm8996 \
-    libjni_livedisplay \
-    liboverlay \
-    libtinyxml
+    libgenlock \
+    liboverlay
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -150,12 +160,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Gesture Handler
 PRODUCT_PACKAGES += \
     GestureHandler
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     gps.msm8996 \
     libcurl \
     libgnsspps
@@ -168,6 +184,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
+# Healthd
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
 
 # HTC Logging functions
 PRODUCT_PACKAGES += \
@@ -208,8 +229,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
     lights.msm8996
 
 # Media
@@ -225,6 +253,8 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
+    android.hardware.nfc@1.0-service \
     com.android.nfc_extras \
     com.nxp.nfc.nq \
     libnqnfc-nci \
@@ -255,9 +285,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
     libshim_power \
-    power.msm8996 \
-    thermal.msm8996
+    power.msm8996
 
 # Properties
 PRODUCT_PACKAGES += \
@@ -265,8 +296,14 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libtinyxml
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# Ril
 PRODUCT_PACKAGES += \
     libhtcril_db \
     libprotobuf-cpp-full \
@@ -279,16 +316,33 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
-# WiFi HAL
+# Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    thermal.msm8996
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libwpa_client \
     hostapd \
     wificond \
