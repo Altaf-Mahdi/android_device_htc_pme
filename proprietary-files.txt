@@ -684,6 +684,12 @@ vendor/lib64/libxtadapter.so|06f38daa86cbef8c91f9692a8d109c03bb6d2061
 vendor/lib64/libxtwifi_ulp_adaptor.so|9202c60490d3a6bf60e36e2451e8e55775c70f8e
 
 # Graphics - LA.UM.6.5.r1-02500-8x96.0
+lib/vendor.display.color@1.0.so|baa2dad5f8a9df6153e4fd2ba5428e1e2ed0f68b
+lib/vendor.display.postproc@1.0.so|b90d5ef619f2069731250250a36d6a947dce920b
+lib64/vendor.display.color@1.0.so|31d03c1a3ee66554d334ac16d4796d730ded72ed
+lib64/vendor.display.postproc@1.0.so|863190e800e47b13797634679eece852e8fd8c6c
+vendor/bin/hw/vendor.display.color@1.0-service|02c05fbda540904e708bb440469dd98b84e8c143
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib/egl/eglSubDriverAndroid.so|0cad0fd3219dc9516cfbfb02decb9b2657b83e47
 vendor/lib/egl/libEGL_adreno.so|8d5d652a860ad1fd92232bfd4cc7252905245367
 vendor/lib/egl/libGLESv1_CM_adreno.so|b6804a9e72fab7f7708cc23e6c6c166c0cc3df3e
@@ -716,6 +722,8 @@ vendor/lib/libsdm-diag.so|e19191d72fc9f085189ccb9ad111b38142cc2bb1
 -vendor/lib/libsdm-disp-vndapis.so|ea3bebdbede24d844f5ea0073220c02ada8dbf68
 vendor/lib/libsdmextension.so|911806424885c08a86c38d61ef8c6efa9bd5482f
 vendor/lib/libtinyxml2_1.so|fddc48298389f15337c65a1b1fa3361925fa937e
+vendor/lib/vendor.display.color@1.0_vendor.so|615820f1ddbf3e06b501aca6b948196b9e8027ab
+vendor/lib/vendor.display.postproc@1.0_vendor.so|dcabce39e2a9cab878fea28a52be053bdc752e59
 vendor/lib64/egl/eglSubDriverAndroid.so|89c4948bc4519c9d6744f820afaa010f7556dfac
 vendor/lib64/egl/libEGL_adreno.so|02d3343c7bad717a757c22303d2cdb54f493da15
 vendor/lib64/egl/libGLESv1_CM_adreno.so|f82b3e4b5b13258654957328b7b8ad6a55270718
@@ -749,6 +757,8 @@ vendor/lib64/libsdm-diag.so|308bcb24fdcfab4db5ce90ffe2cb5ad897b5a6b7
 vendor/lib64/libsdmextension.so|04df600640381b8a3f1e85d24198aac8d2b99939
 vendor/lib64/libtinyxml2_1.so|eb4cd93e051980b8b35f5eeebd3d980e033cb87f
 vendor/lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
+vendor/lib64/vendor.display.color@1.0_vendor.so|34b397e1c6f8077af848c9353d158ef8f458c2b8
+vendor/lib64/vendor.display.postproc@1.0_vendor.so|e57cfa45f72430d8c749a251aa423ab665a04088
 
 # Graphics firmware
 etc/firmware/a225_pfp.fw
