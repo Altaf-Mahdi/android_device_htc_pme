@@ -667,7 +667,7 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps diag
     writepid /dev/cpuset/system-background/tasks
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
