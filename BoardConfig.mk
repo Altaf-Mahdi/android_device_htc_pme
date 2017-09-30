@@ -153,6 +153,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26323451904
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_INIT_VENDOR_LIB := libinit_pme
@@ -166,9 +170,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Linker
 LINKER_FORCED_SHIM_LIBS := /system/vendor/bin/slim_daemon|liblog_htc.so
-
-# Mainfest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
