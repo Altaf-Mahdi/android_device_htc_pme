@@ -574,14 +574,14 @@ service netmgrd /system/bin/netmgrd
     writepid /dev/cpuset/system-background/tasks
 
 #Start up peripheral manager
-service per_mgr /system/bin/pm-service
+service per_mgr /system/vendor/bin/pm-service
     class core
     user system
     group system net_raw
     ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
-service per_proxy /system/bin/pm-proxy
+service per_proxy /system/vendor/bin/pm-proxy
     class core
     user system
     group system

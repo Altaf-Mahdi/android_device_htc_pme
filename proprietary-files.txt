@@ -897,8 +897,8 @@ vendor/lib/libqti-iop-client.so
 vendor/lib/libqti-perfd-client.so
 
 # Peripheral manager
-bin/pm-proxy
-bin/pm-service
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
