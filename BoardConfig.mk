@@ -109,12 +109,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 WITH_LINEAGE_CHARGER := false
 
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(DEVICE_PATH)/cmhw
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -169,6 +163,10 @@ TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    $(VENDOR_PATH)/lineagehw
 
 # Linker
 LINKER_FORCED_SHIM_LIBS := /system/vendor/bin/slim_daemon|liblog_htc.so
