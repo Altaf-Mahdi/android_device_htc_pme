@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.lineageos.settings.device;
 
 import android.content.Context;
 import android.util.Log;
@@ -23,7 +23,7 @@ import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
 
-import cyanogenmod.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -39,8 +39,8 @@ public class KeyHandler implements DeviceKeyHandler {
 
     public boolean handleKeyEvent(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.KEYCODE_HOME && event.getScanCode() == 143) {
-            CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
-            boolean virtualKeysEnabled = hardware.get(CMHardwareManager.FEATURE_KEY_DISABLE);
+            LineageHardwareManager hardware = LineageHardwareManager.getInstance(mContext);
+            boolean virtualKeysEnabled = hardware.get(LineageHardwareManager.FEATURE_KEY_DISABLE);
 
             if (DEBUG) {
                 Log.d(TAG, "home key " + (virtualKeysEnabled ? "filtered" : "delivered"));
