@@ -287,6 +287,9 @@ PRODUCT_PACKAGES += \
     libshim_power \
     power.qcom
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # Properties
 PRODUCT_PACKAGES += \
     operator-properties
