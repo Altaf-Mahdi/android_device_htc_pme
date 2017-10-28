@@ -285,7 +285,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service \
     libshim_power \
-    power.msm8996
+    power.qcom
 
 # Properties
 PRODUCT_PACKAGES += \

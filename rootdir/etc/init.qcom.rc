@@ -204,13 +204,9 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-    # Create directory for perfd
-    mkdir /data/system/perfd 2770 root system
-    rm /data/system/perfd/default_values
-    start perfd
-
-    # Create IOP  deamon related dirs
-    mkdir /data/misc/iop 0770 root system
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
 
     # Create /data/vendor/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
@@ -562,7 +558,7 @@ service loc_launcher /vendor/bin/loc_launcher
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class main
     user root
     group root
@@ -596,20 +592,10 @@ on property:sys.shutdown.requested=*
 service perfd /vendor/bin/perfd
     class main
     user root
-    group root readproc
-    socket perfd seqpacket 0666 root system
-    disabled
+    group root system
     writepid /dev/cpuset/system-background/tasks
 
-service iop /system/bin/iop
-    class main
-    user root
-    group root
-    socket iop seqpacket 0666 root system
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service energy-awareness /system/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
